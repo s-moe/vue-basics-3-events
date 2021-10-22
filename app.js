@@ -4,9 +4,34 @@ const app = Vue.createApp({
       counter: 0,
       name: "",
       confirmedName: "",
+      fullName: "",
     };
   },
+  watch: {
+    name(value) {
+      if (value === "") {
+        this.fullName = "";
+      } else {
+        this.fullName = value + " " + "Moe";
+      }
+    },
+  },
+  computed: {
+    // fullName() {
+    //   console.log("hi");
+    //   if (this.name === "") {
+    //     return "";
+    //   }
+    //   return this.name + " " + "Moe";
+    // },
+  },
   methods: {
+    // outputFullName() {
+    //   if (this.name === "") {
+    //     return "";
+    //   }
+    //   return this.name + " " + "Moe";
+    // },
     resetInput() {
       this.name = "";
     },
@@ -22,7 +47,7 @@ const app = Vue.createApp({
     subtract(num) {
       this.counter = this.counter - num;
     },
-    setName(event, lastName) {
+    setName(event) {
       this.name = event.target.value;
     },
   },
