@@ -23,11 +23,13 @@
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
       <input type="text" v-model="name" />
+      <input type="text" v-model="lastName" />
       <button @click="resetInput">Reset Input</button>
       <p>Your name: {{fullName}}</p>
       <form v-on:submit.prevent="submitForm">
         <label for="firstName"></label>
         <input type="text" id="firstName" />
+
         <button>Sign Up</button>
       </form>
     </section>
