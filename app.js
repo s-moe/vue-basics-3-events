@@ -6,6 +6,10 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    submitForm(event) {
+      event.preventDefault();
+      alert("Submitted");
+    },
     addOne(num) {
       this.counter = this.counter + num;
     },
