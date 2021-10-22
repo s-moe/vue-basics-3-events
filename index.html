@@ -19,7 +19,7 @@
     <section id="events">
       <h2>Events in Action</h2>
       <button @click="addOne(5)">Add 5</button>
-      <button @click="subtractOne(5)">Subtract 5</button>
+      <button @click.right="subtractOne(5)">Subtract 5</button>
       <p>Result: {{ counter }}</p>
       <input type="text" v-on:input="setName($event, 'Moe')" />
       <p>Your name: {{name}}</p>
